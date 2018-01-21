@@ -8,8 +8,28 @@ define('WWW_ROOT', __DIR__ . DS);
 
 $routes = array(
   'home' => array(
+    'controller' => 'Pages',
+    'action' => 'index'
+  ),
+  'programma' => array(
     'controller' => 'Events',
     'action' => 'index'
+  ),
+  'over-de-week' => array(
+    'controller' => 'Pages',
+    'action' => 'overDeWeek'
+  ),
+  'over-de-acties' => array(
+    'controller' => 'Pages',
+    'action' => 'overDeActies'
+  ),
+  'nieuws' => array(
+    'controller' => 'Pages',
+    'action' => 'index'
+  ),
+  'event-detail' => array(
+    'controller' => 'Events',
+    'action' => 'detail'
   ),
 );
 

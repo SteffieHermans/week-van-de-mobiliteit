@@ -1,0 +1,14 @@
+@import 'reset';
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after { /* stylelint-disable-line */
+  box-sizing: inherit;
+}
+
+.hide {
+  display: none;
+}
