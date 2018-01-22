@@ -1,0 +1,14 @@
+/* stylelint-disable */
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Futura Medium'), local('Futura-Medium'), url(futura_medium.woff2) format('woff2'), url(futura_medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Futura Bold'), local('Futura-Bold'), url(futura_bold.woff2) format('woff2'), url(futura_bold.woff) format('woff');
+}

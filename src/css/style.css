@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'vars';
 
 html {
   font-size: 62.5%;
@@ -11,4 +12,265 @@ html {
 
 .hide {
   display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  color: var(--dark-grey);
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 96rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  margin-top: 5rem;
+}
+
+.main-title {
+  font-family: 'Intro Cond';
+  font-weight: bold;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  margin-left: -3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    background-image: url(../assets/img/streepje.svg);
+    background-repeat: no-repeat;
+    width: 5.8rem;
+    height: .3rem;
+    margin-top: -.5rem;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    background-image: url(../assets/img/streepje.svg);
+    background-repeat: no-repeat;
+    width: 5.8rem;
+    height: .3rem;
+    margin-top: .3rem;
+  }
+}
+
+/* start Header */
+
+.main-header {
+  width: 100%;
+  border-bottom: .3rem solid var(--orange);
+}
+/* end Header */
+
+/* start Program Page */
+
+.activity-grid {
+  display: grid;
+  grid-template-rows: 22.4rem;
+  grid-template-columns: 29rem;
+  grid-gap: 2rem;
+  align-self: center;
+}
+
+.filter {
+  align-self: center;
+}
+
+.program-grid-item {
+  position: relative;
+  width: 29rem;
+  height: 22.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.filter-container {
+  border: .3rem solid var(--orange);
+  justify-content: center;
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 2rem;
+  line-height: 2.5rem;
+}
+
+input, select {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.filter-input {
+  font-family: Futura;
+  font-size: 2rem;
+  color: var(--orange-pink);
+  border-bottom: .1rem solid #353535;
+  width: 17rem;
+
+  &::placeholder {
+    color: var(--orange-pink);
+  }
+}
+
+.filter-button {
+  width: 9.9rem;
+  height: 4rem;
+  background-color: var(--orange);
+  border: none;
+  font-family: 'Intro Cond';
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.grid-item-link {
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.grid-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.tags {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  color: var(--orange);
+}
+
+.tag {
+  padding: .5rem;
+  background-color: white;
+  font-family: Futura;
+  font-weight: bold;
+
+  & + .tag {
+    margin-left: .5rem;
+  }
+}
+
+.activity-info {
+  width: 100%;
+  background-color: rgba(249, 249, 249, .95);
+  padding: 1rem;
+}
+
+h3 {
+  font-family: Futura;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.time, .place {
+  font-family: Futura;
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.time {
+
+  &::before {
+    content: '';
+    background-image: url(../assets/img/klok.svg);
+    background-repeat: no-repeat;
+    width: 1.3rem;
+    height: 1.4rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+  }
+}
+
+.place {
+  margin-top: .6rem;
+
+  &::before {
+    content: '';
+    background-image: url(../assets/img/huisje.svg);
+    background-repeat: no-repeat;
+    width: 1.1rem;
+    height: 1.3rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+  }
+}
+/* end Program Page */
+
+/* start Footer */
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--orange);
+  color: var(--light-brown);
+
+  margin-top: 5rem;
+}
+
+.footer-top-section {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-title {
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+/* end Footer */
+
+@media only screen and (max-width: 370px) {
+  .main-title{
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 610px) {
+
+  .activity-grid {
+    grid-template-rows: 22.4rem;
+    grid-template-columns: repeat(2, 29rem);
+  }
+}
+
+@media only screen and (min-width: 960px) {
+
+  .activity-grid {
+    grid-template-rows: 22.4rem;
+    grid-template-columns: repeat(3, 29rem);
+  }
 }

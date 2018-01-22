@@ -5,9 +5,24 @@
     <title>Week van de Mobiliteit - <?php echo $title;?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <?php echo $css;?>
+    <script>
+      WebFontConfig = {
+        custom: {
+          families: ['Futura', 'Intro Cond'],
+          urls: ['assets/fonts/futura/futura.css', 'assets/fonts/intro-cond/intro-cond.css']
+        }
+      };
+
+      (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+      })(document);
+    </script>
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <div class="container">
         <div class="logo">
           <h1 class="hide">Week van de Mobiliteit</h1>
@@ -27,18 +42,20 @@
       </div>
     </header>
 
-    <div class="container">
-      <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
-      <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
+    <main>
+      <div class="container main-container">
+        <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
+        <?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
 
-      <?php echo $content; ?>
-    </div>
+        <?php echo $content; ?>
+      </div>
+    </main>
 
     <footer>
       <div class="container">
         <div class="footer-top-section">
           <section class="footer-section initiatiefnemer">
-            <h2>Een initiatief van het Netwerk Duurzame Mobiliteit (Komimo vzw)</h2>
+            <h2 class="footer-title">Een initiatief van het Netwerk Duurzame<br/> Mobiliteit (Komimo vzw)</h2>
             <address>
               Kasteellaan 349a<br/>
               9000 Gent
@@ -49,7 +66,7 @@
             </p>
           </section>
           <section class="footer-section partners">
-            <h2>Onze Partners</h2>
+            <h2 class="footer-title">Onze Partners</h2>
             <div class="partner-logos">
               <a href="#" class="partner-logo">
                 <img src="assets/img/logo-vlaanderen-wit.png" alt="Logo Vlaamse Overheid, Logo Vlaanderen" width="83" height="36">

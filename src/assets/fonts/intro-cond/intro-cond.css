@@ -1,0 +1,7 @@
+/* stylelint-disable */
+@font-face {
+  font-family: 'Intro Cond';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Intro Cond Black'), local('Intro-Cond-Black'), url(intro-cond-black.woff2) format('woff2'), url(intro-cond-black.woff) format('woff');
+}
