@@ -88,6 +88,10 @@ body {
 
 .filter {
   align-self: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .program-grid-item {
@@ -109,11 +113,27 @@ body {
   line-height: 2.5rem;
 }
 
+.filter-sentence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 input, select {
   border: none;
   border-radius: 0;
   background-color: transparent;
   outline: none;
+  -webkit-appearance: none; /* stylelint-disable-line */
+}
+
+input {
+  margin-left: .5rem;
+  margin-right: .5rem;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 }
 
 .filter-input {
@@ -122,9 +142,31 @@ input, select {
   color: var(--orange-pink);
   border-bottom: .1rem solid #353535;
   width: 17rem;
+  padding-left: .5rem;
 
   &::placeholder {
     color: var(--orange-pink);
+  }
+}
+
+.input-select {
+  width: 17rem;
+  position: relative;
+  margin-left: .5rem;
+  margin-right: 2.5rem;
+
+  &::after {
+    content: '';
+    background-image: url(../assets/img/arrow-down.svg);
+    background-repeat: no-repeat;
+    width: .9rem;
+    height: .8rem;
+    margin-top: 1.2rem;
+    margin-right: .5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
   }
 }
 
@@ -135,10 +177,19 @@ input, select {
   border: none;
   font-family: 'Intro Cond';
   font-weight: bold;
+  color: white;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.remove-filter-button {
+  text-decoration: none;
+  color: var(--orange);
+  font-family: Futura;
+  font-size: 1.2rem;
+  margin-left: 1rem;
 }
 
 .grid-item-link {
@@ -254,7 +305,8 @@ footer {
 /* end Footer */
 
 @media only screen and (max-width: 370px) {
-  .main-title{
+
+  .main-title {
     margin-left: 0;
   }
 }
@@ -267,7 +319,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 980px) {
 
   .activity-grid {
     grid-template-rows: 22.4rem;
