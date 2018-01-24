@@ -58,8 +58,8 @@ class EventsController extends Controller {
 
     $this->set('events', $events);
     $this->set('tags', $tags);
-    $this->set('title', 'Home');
-    $this->set('currentPage', 'home');
+    $this->set('title', 'Programma');
+    $this->set('currentPage', 'programma');
   }
 
 }

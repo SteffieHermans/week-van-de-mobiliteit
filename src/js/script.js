@@ -4,8 +4,10 @@
   const $removeFilter = document.querySelector(`.remove-filter-button`);
 
   const init = () =>   {
-    $filter.addEventListener(`submit`, handleSubmitFilter);
-    $removeFilter.addEventListener(`click`, handleClickRemoveFilter);
+    if($filter){
+      $filter.addEventListener(`submit`, handleSubmitFilter);
+      $removeFilter.addEventListener(`click`, handleClickRemoveFilter);
+    }
   };
 
   const handleClickRemoveFilter = e => {
