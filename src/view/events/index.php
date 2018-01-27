@@ -57,7 +57,7 @@
         </ul>
         <div class="activity-info">
           <header><h3 class="title"><?php echo $event['title']; ?></h3></header>
-          <p class="time"><?php echo date('d/m', strtotime($event['start']));?><?php if(date('d/m', strtotime($event['start'])) != date('d/m', strtotime($event['end']))) echo ' - ' . date('d/m', strtotime($event['end']));?></p>
+          <p class="time"><?php echo date('d/m', strtotime($event['start']));?><?php if(date('d/m', strtotime($event['start'])) != date('d/m', strtotime($event['end']))):?> - <?php echo date('d/m', strtotime($event['end']));?> <?php endif;?></p>
           <p class="place"><?php echo $event['city']; ?></p>
         </div>
       </article>

@@ -8,9 +8,8 @@
   "license": "MIT",
   "scripts": {
     "development": "NODE_ENV=development webpack-dev-server --open 'Google Chrome'",
-    "production": "yarn run clean && yarn run copydist && yarn run copyvendors && NODE_ENV=production webpack -p ",
+    "production": "yarn run clean && yarn run copydist && NODE_ENV=production webpack -p ",
     "copydist": "ditto ./src/ ./dist/ && rm -rf ./dist/css && rm -rf ./dist/js",
-    "copyvendors": "ditto ./src/js/vendors/ ./dist/js/vendors",
     "test": "jest",
     "clean": "rm -rf ./dist"
   },

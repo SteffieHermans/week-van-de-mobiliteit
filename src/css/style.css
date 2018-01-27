@@ -20,8 +20,9 @@ body {
   align-items: center;
 
   font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   color: var(--dark-grey);
-  font-size: 1.2rem;
 }
 
 main {
@@ -32,6 +33,10 @@ main {
   margin-top: 9rem;
 }
 
+strong {
+  font-weight: bold;
+}
+
 .container {
   max-width: 96rem;
   display: flex;
@@ -39,15 +44,15 @@ main {
 }
 
 .main-container {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .main-title {
   font-family: 'Intro Cond';
   font-weight: bold;
-  font-size: 3.6rem;
-  margin-bottom: 2rem;
-  margin-left: -3rem;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -58,7 +63,7 @@ main {
     background-repeat: no-repeat;
     width: 5.8rem;
     height: .3rem;
-    margin-top: -.5rem;
+    margin-top: .5rem;
   }
 }
 
@@ -81,7 +86,7 @@ main {
 .main-header {
   position: fixed;
   background-color: white;
-  width: 100%;
+  width: 100vw;
   border-bottom: .3rem solid var(--orange);
   display: flex;
   justify-content: center;
@@ -239,48 +244,119 @@ main {
 /* start Home Page */
 
 .home-header {
-  width: 100%;
-  height: 40vw;
   background-color: var(--light-grey);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.home-header div {
+  width: 100vw;
+  max-width: 96rem;
+  height: 21.5rem;
 
   display: grid;
-  grid-template: 'header-image header-article' 1fr / 1fr 2fr;
+  grid-template: 'header-image header-article' 1fr / 1fr 3fr;
 }
 
 .header-article {
-  grid-area: 'header-article';
-  padding-left: 6rem;
-  padding-top: 12vw;
+  grid-area: header-article;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: right;
 }
 
 .header-image {
-  grid-area: 'header-image';
+  grid-area: header-image;
   align-self: flex-end;
   justify-self: flex-end;
+  width: 8.5rem;
+  margin-right: -2.5rem;
 }
 
 .header-title {
-  margin-left: 0;
+  margin-left: -3rem;
   margin-bottom: 1rem;
 }
 
 .text-indent {
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 
 .header-text {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .btn {
   font-family: 'Intro Cond';
+  min-width: 11.3rem;
   color: white;
   padding: 1rem;
   background-color: var(--orange);
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-button {
+  margin-left: 4rem;
+}
+
+.ontdek, .beleef, .doe-mee {
+  padding: 0 2rem;
+}
+
+.small-image {
+  margin-bottom: 1rem;
+}
+
+.big-image {
+  display: none;
+}
+
+.home-info-with-stats {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.home-info-with-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 46rem;
+}
+
+.secondary {
+  background-color: white;
+  color: var(--orange);
+  border: .2rem solid var(--orange);
+  margin-top: 2rem;
+}
+
+.btn-no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.bright {
+  color: var(--orange);
+}
+
+.hashtag {
+  margin-top: -.5rem;
+}
+
+.last-hashtag {
+  margin-bottom: 1.5rem;
+}
+
+.hashtag + .hashtag {
+  margin-top: .75rem;
 }
 
 .embed-container {
@@ -288,7 +364,7 @@ main {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 100%;
+  max-width: 96%;
 }
 
 .embed-container iframe, .embed-container object, .embed-container embed {
@@ -299,16 +375,137 @@ main {
   height: 100%;
 }
 
+.grey-square {
+  background-color: var(--light-grey);
+  height: 28rem;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 1rem;
+  margin-top: -10rem;
+  padding: 1.5rem;
+}
+
+.beleef {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beleef-main-button {
+  margin-top: 3rem;
+}
+
+.event-days {
+  margin-top: .25rem;
+  display: grid;
+  grid-template: repeat(3, min-content) / 100%;
+  grid-template-areas:
+
+    'zondag'
+    'donderdag'
+    'vrijdag';
+  grid-gap: 3rem;
+}
+
+.event-day {
+  background-color: var(--light-grey);
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - .5rem);
+  max-width: 27.1rem;
+  height: fit-content;
+
+  &::after {
+    content: '';
+    background-image: url(../assets/img/striped-square2.svg);
+    background-repeat: no-repeat;
+    width: 20.9rem;
+    height: 21.7rem;
+    position: absolute;
+    bottom: -.5rem;
+    right: -.5rem;
+    z-index: -2;
+  }
+}
+
+.small-button {
+  color: var(--orange);
+  background-color: white;
+  border: .2rem solid var(--orange);
+  margin-top: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .25rem;
+}
+
+.event-date {
+  color: #dbdbdb;
+  font-weight: bold;
+}
+
+.actie-title {
+  font-size: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    background-image: url(../assets/img/streepje.svg);
+    background-repeat: no-repeat;
+    width: 5.8rem;
+    height: .3rem;
+    margin-top: .25rem;
+  }
+}
+
+.doe-mee {
+  margin-top: 3rem;
+}
+
+.switch {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.switch-image {
+  display: none;
+}
+
+.switch-subtitle {
+  font-size: 1.7rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.buttons .btn {
+  margin-bottom: .5rem;
+  margin-top: 0;
+}
+
+.first-button {
+  margin-right: 1rem;
+}
+
 .instagram-grid {
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(3, 15vw); /* stylelint-disable-line */
-  grid-template-columns: repeat(5, 15vw); /* stylelint-disable-line */
+  grid-template: repeat(3, 29vw) /repeat(3, 29vw);
   grid-template-areas:
 
-    'instagram-image-1 instagram-image-1 instagram-image-2 instagram-image-3 instagram-image-4'
-    'instagram-image-1 instagram-image-1 instagram-image-5 instagram-image-6 instagram-image-6'
-    'instagram-image-7 instagram-image-8 instagram-image-9 instagram-image-6 instagram-image-6';
+    'instagram-image-1 instagram-image-2 instagram-image-3'
+    'instagram-image-4 instagram-image-5 instagram-image-6'
+    'instagram-image-7 instagram-image-8 instagram-image-9';
   grid-gap: .4rem;
 }
 
@@ -503,16 +700,19 @@ input {
 .tags {
   display: flex;
   align-self: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin-right: 1rem;
-  margin-bottom: 1rem;
   color: var(--orange);
 }
 
 .tag {
   padding: .5rem;
+  margin-bottom: .5rem;
   background-color: white;
   font-family: Futura;
   font-weight: bold;
+  font-size: 1.2rem;
 
   & + .tag {
     margin-left: .5rem;
@@ -569,6 +769,180 @@ h3 {
 }
 /* end Program Page */
 
+/* start Detail Page */
+
+.detail-header {
+  position: relative;
+  width: 100vw;
+  height: 43vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.detail-header-image {
+  position: absolute;
+  width: 100vw;
+  height: 43vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.detail-title-container {
+  background-color: rgba(230, 110, 97, .9);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-title-container div {
+  width: 100%;
+  max-width: 96rem;
+}
+
+.detail-title {
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--light-grey);
+}
+
+.detail-tags {
+  display: none;
+  width: 31.54rem;
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+
+.detail-page-tag {
+  font-size: 1rem;
+}
+
+.detail-grid {
+  margin-top: -2rem;
+  display: grid;
+  grid-template: repeat(4, min-content) / 100%;
+  grid-template-areas:
+    'nuttige-info'
+    'main-info'
+    'practical-info';
+  grid-gap: 4rem;
+}
+
+.other-acitivities {
+  grid-area: other-activities;
+}
+
+.nuttige-info {
+  grid-area: nuttige-info;
+  background-color: var(--light-grey);
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  padding: 2rem;
+  font-family: Futura, sans-serif;
+  grid-template-areas:
+
+    'wanneer wie'
+    'waar wie';
+  grid-gap: 1.5rem;
+}
+
+.wanneer {
+  grid-area: wanneer;
+}
+
+.waar {
+  grid-area: waar;
+}
+
+.wie {
+  grid-area: wie;
+}
+
+.small-main-title {
+  font-family: Futura, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    background-image: url(../assets/img/streepje.svg);
+    background-repeat: no-repeat;
+    width: 5.8rem;
+    height: .3rem;
+    margin-top: .25rem;
+  }
+}
+
+.main-info {
+  grid-area: main-info;
+  padding: 0 2rem;
+}
+
+.practical-info {
+  grid-area: practical-info;
+  padding: 2rem;
+  background-color: var(--light-grey);
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.main-info p + p, .practical-info p + p {
+  margin-top: 1rem;
+}
+
+.content-subtitle {
+  font-family: Futura;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--orange);
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+}
+
+.practical-info ul, .bullet-points {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+
+  & li + li {
+    margin-top: 1rem;
+  }
+
+  & li {
+    position: relative;
+
+    &::before {
+      content: '';
+      background-image: url(../assets/img/bullet-point.svg);
+      background-repeat: no-repeat;
+      width: .8rem;
+      height: .8rem;
+      position: absolute;
+      top: .4rem;
+      left: -1.5rem;
+    }
+  }
+}
+
+.other-activities {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-activities .main-title {
+  align-self: center;
+}
+/* end Detail Page */
+
 /* start Footer */
 
 footer {
@@ -610,7 +984,6 @@ footer {
 .footer-title {
   font-family: Futura;
   font-weight: bold;
-  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -664,23 +1037,362 @@ address {
   }
 }
 /* end Footer */
+@media only screen and (min-width: 400px) {
 
-@media only screen and (max-width: 370px) {
+  .header-image {
+    margin-right: -1.5rem;
+    width: 9.5rem;
+  }
+
+  .header-title {
+    margin-left: -1rem;
+  }
 
   .main-title {
+    font-size: 3rem;
+  }
+
+  .header-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .small-image {
+    margin-bottom: 2rem;
+  }
+
+  .grey-square {
+    margin-left: 11rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+
+  .header-article {
+    padding-top: 2.5rem;
+  }
+
+  .main-title {
+    font-size: 3.6rem;
     margin-left: 0;
+  }
+
+  .header-image {
+    margin-right: -.5rem;
+  }
+
+  .header-text {
+    margin-bottom: 3.5rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .header-button {
+    margin-left: 3rem;
+  }
+
+  .detail-title-container {
+    padding: 2rem;
+  }
+
+  .detail-tags {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .detail-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media only screen and (min-width: 610px) {
 
+  .home-header div {
+    height: 27.5rem;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .header-article {
+    padding-top: 5rem;
+  }
+
+  .header-image {
+    margin-right: 2rem;
+    width: 13rem;
+  }
+
+  .header-text, .header-button {
+    margin-left: 2rem;
+  }
+
+  .header-text {
+    max-width: 32.7rem;
+  }
+
+  .video {
+    display: flex;
+    align-items: center;
+    margin-top: -2rem;
+  }
+
+  .beleef {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .grey-square {
+    height: 36vw;
+    width: 60.5vw;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: -23vw;
+    padding-left: calc(23vw + 2rem);
+  }
+
+  .embed-container {
+    width: 54vw;
+  }
+
+  .event-days {
+    margin-top: 3rem;
+    grid-gap: 3vw;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(4, 15rem);
+  }
+
+  .zondag {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .donderdag {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+
+  .vrijdag {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+  }
+
+  .beleef-main-button {
+    margin-top: 4rem;
+  }
+
+  .switch {
+    display: flex;
+    align-items: center;
+  }
+
+  .switch-image {
+    display: block;
+    width: 35vw;
+    max-width: 26.1rem;
+    margin-right: 2rem;
+  }
+
+  .instagram-grid {
+    grid-template: repeat(3, 18vw) / repeat(5, 18vw);
+    grid-template-areas:
+
+      'instagram-image-1 instagram-image-1 instagram-image-2 instagram-image-3 instagram-image-4'
+      'instagram-image-1 instagram-image-1 instagram-image-5 instagram-image-6 instagram-image-6'
+      'instagram-image-7 instagram-image-8 instagram-image-9 instagram-image-6 instagram-image-6';
+  }
+
   .activity-grid {
     grid-template-rows: 22.4rem;
     grid-template-columns: repeat(2, 29rem);
   }
+
+  .small-image {
+    display: none;
+  }
+
+  .big-image {
+    display: block;
+    width: 25rem;
+    margin-top: -5rem;
+  }
+
+  .home-info-with-stats {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 72rem;
+  }
+
+  .home-info-with-stats div {
+    max-width: 26rem;
+  }
+
+  .main-container {
+    margin-top: 4rem;
+  }
+
+  .detail-grid {
+    margin-top: -4rem;
+  }
 }
 
-@media only screen and (min-width: 742px) {
+@media only screen and (min-width: 678px) {
+
+  .beleef, .ontdek, .doe-mee {
+    padding: 0 4rem;
+  }
+
+  .main-title {
+    margin-left: -2rem;
+  }
+
+  .big-image {
+    width: 35vw;
+    max-width: 30rem;
+  }
+
+  .embed-container {
+    width: 47.4vw;
+    max-width: 50.5rem;
+  }
+
+  .grey-square {
+    height: 31vw;
+    width: 61vw;
+    max-height: 31.7rem;
+    max-width: 62.5rem;
+  }
+
+  .switch-subtitle {
+    font-size: 2rem;
+  }
+
+  .last-hashtag {
+    margin-bottom: 2.5rem;
+  }
+
+  .event-days {
+    grid-gap: 5vw;
+  }
+
+  .instagram-grid {
+    grid-template: repeat(3, 16.5vw) / repeat(5, 16.5vw);
+  }
+
+  .home-header div {
+    height: 44vw;
+    max-height: 42.2rem;
+    padding-top: 2rem;
+  }
+
+  .header-article {
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  .header-title {
+    margin-left: 0;
+  }
+
+  .header-image {
+    width: 22vw;
+    max-width: 21.1rem;
+  }
+
+  .header-text {
+    margin-bottom: 7vw;
+  }
+
+  .btn {
+    padding-top: 1.5rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .small-button {
+    padding-top: .5rem;
+    padding-bottom: .25rem;
+  }
+
+  footer {
+    padding: 2rem 4rem;
+  }
+
+  .footer-top-section {
+    flex-direction: row;
+  }
+
+  .footer-section {
+    flex: 1;
+  }
+
+  .initiatiefnemer {
+    margin-right: 3rem;
+  }
+
+  .partners {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .footer-bottom-section {
+    border-top: none;
+  }
+
+  .main-info, .other-activities {
+    padding: 0 4rem;
+  }
+
+  .detail-grid {
+    margin-top: -2rem;
+    grid-gap: 0;
+    grid-template: min-content 1fr min-content / 60vw 1fr;
+    width: 100vw;
+    max-width: 96rem;
+  }
+
+  .main-info {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    padding: 2rem 4rem;
+  }
+
+  .nuttige-info {
+    grid-row: 1;
+    grid-column: 2;
+    grid-template: repeat(3, max-content) / none;
+    grid-template-areas:
+
+      'wanneer'
+      'waar'
+      'wie';
+    height: fit-content;
+  }
+
+  .practical-info {
+    grid-row: 2;
+    grid-column: 2;
+    height: fit-content;
+    padding: 0 2rem 2rem;
+  }
+
+  .other-activities {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    width: 100vw;
+    max-width: 96rem;
+    margin-top: 4rem;
+  }
+
+  .other-activities .activity-grid {
+    margin-top: 1rem;
+  }
+
+  .detail-page-tag {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 746px) {
 
   .big-menu {
     display: flex;
@@ -689,12 +1401,64 @@ address {
   .small-menu {
     display: none;
   }
+
+  .home-header div {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .switch {
+    margin-bottom: 4rem;
+  }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 960px) {
+
+  .detail-grid {
+    grid-template-columns: 57.6rem 1fr;
+  }
+
+  .detail-title-container {
+    padding: 0;
+  }
+
+  .detail-title-container div {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
 
   .activity-grid {
     grid-template-rows: 22.4rem;
     grid-template-columns: repeat(3, 29rem);
+  }
+
+  .instagram-grid {
+    grid-template: repeat(3, 16.9rem) / repeat(5, 16.9rem);
+  }
+
+  .event-days {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(3, 15rem);
+  }
+
+  .zondag {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .donderdag {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+
+  .vrijdag {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  footer .container {
+    padding: 0 4rem;
   }
 }
