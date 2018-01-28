@@ -27,7 +27,10 @@
         <div class="logo">
           <h1 class="hide">Week van de Mobiliteit</h1>
           <a href="index.php">
-            <img src="assets/img/logo.png" alt="Logo Week van de Mobiliteit" height="35" width="162">
+            <picture>
+              <source media="(min-width: 10px)" srcset="assets/img/logo.webp" type="image/webp"/>
+              <img src="assets/img/logo.png" alt="Logo Week van de Mobiliteit" height="35" width="162">
+            </picture>
           </a>
         </div>
         <div class="small-menu">
@@ -63,29 +66,37 @@
 
     <main>
       <?php if($currentPage == 'home'): ?>
-        <section class="home-header">
+        <div class="home-header">
           <div>
             <img class="header-image" src="assets/img/power-hand.svg" alt="Power Fist Roadmap">
             <article class="header-article">
               <h2 class="main-title header-title">Meer Autominderen</h2>
               <p class="text-indent header-text">Ontdek wat jij kunt doen om te autominderen. Beleef de verschillende activiteiten!</p>
-              <a class="btn header-button" href=index.php?page=programma>Vind een Activiteit</a>
+              <a class="btn header-button" href="index.php?page=programma">Vind een Activiteit</a>
             </article>
           </div>
-        </section>
+        </div>
       <?php endif;?>
       <?php if($currentPage == 'event-detail'): ?>
-        <section class="detail-header">
+        <div class="detail-header">
           <picture class="detail-image-header">
+            <source media="(max-width: 399px)" srcset="assets/img/<?php echo $event['code'];?>-360w.webp" type="image/webp"/>
+            <source media="(max-width: 399px)" srcset="assets/img/<?php echo $event['code'];?>-360w.jpg"/>
+            <source media="(min-width: 400px)" srcset="assets/img/<?php echo $event['code'];?>-720w.webp" type="image/webp"/>
+            <source media="(min-width: 400px)" srcset="assets/img/<?php echo $event['code'];?>-720w.jpg"/>
+            <source media="(min-width: 800px)" srcset="assets/img/<?php echo $event['code'];?>-1080w.webp" type="image/webp"/>
+            <source media="(min-width: 800px)" srcset="assets/img/<?php echo $event['code'];?>-1080w.jpg"/>
+            <source media="(min-width: 1100px)" srcset="assets/img/<?php echo $event['code'];?>-1440w.webp" type="image/webp"/>
+            <source media="(min-width: 1100px)" srcset="assets/img/<?php echo $event['code'];?>-1440w.jpg"/>
             <img class="detail-header-image"
-              src="assets/img/ANT1-1440w.jpg"
+              src="assets/img/<?php echo $event['code'];?>-1440w.jpg"
               width="1440" height="626"
-              srcset="assets/img/ANT1-1440w.jpg 1440w,
-                      assets/img/ANT1-1080w.jpg 1080w,
-                      assets/img/ANT1-720w.jpg 720w,
-                      assets/img/ANT1-360w.jpg 360w"
+              srcset="assets/img/<?php echo $event['code'];?>-1440w.jpg 1440w,
+                      assets/img/<?php echo $event['code'];?>-1080w.jpg 1080w,
+                      assets/img/<?php echo $event['code'];?>-720w.jpg 720w,
+                      assets/img/<?php echo $event['code'];?>-360w.jpg 360w"
               sizes="(min-width: 10px) 100vw"
-              alt="Antwerpen ANT1 Header Image"/>
+              alt="<?php echo $event['title']; ?>"/>
           </picture>
           <div class="detail-title-container">
             <div>
@@ -95,7 +106,7 @@
               </ul>
             </div>
           </div>
-        </section>
+        </div>
       <?php endif; ?>
       <div class="container main-container">
         <?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
@@ -123,16 +134,28 @@
             <h2 class="footer-title">Onze Partners</h2>
             <div class="partner-logos">
               <a href="https://www.vlaanderen.be/nl" class="partner-logo" target="_blank">
-                <img src="assets/img/logo-vlaanderen-wit.png" alt="Logo Vlaamse Overheid, Logo Vlaanderen" width="83" height="36">
+                <picture>
+                  <source media="(min-width: 10px)" srcset="assets/img/logo-vlaanderen-wit.webp" type="image/webp"/>
+                  <img src="assets/img/logo-vlaanderen-wit.png" alt="Logo Vlaamse Overheid, Logo Vlaanderen" width="83" height="36">
+                </picture>
               </a>
               <a href="http://www.belgianrail.be/nl" class="partner-logo" target="_blank">
-                <img src="assets/img/NMBS_logo_wit.png" alt="Logo NMBS" width="55" height="36">
+                <picture>
+                  <source media="(min-width: 10px)" srcset="assets/img/NMBS_logo_wit.webp" type="image/webp"/>
+                  <img src="assets/img/NMBS_logo_wit.png" alt="Logo NMBS" width="55" height="36">
+                </picture>
               </a>
               <a href="https://www.delijn.be/nl/" class="partner-logo" target="_blank">
-                <img src="assets/img/de_lijn_wit.png" alt="Logo De Lijn" width="38" height="37">
+                <picture>
+                  <source media="(min-width: 10px)" srcset="assets/img/de_lijn_wit.webp" type="image/webp"/>
+                  <img src="assets/img/de_lijn_wit.png" alt="Logo De Lijn" width="38" height="37">
+                </picture>
               </a>
               <a href="http://www.mobilityweek.eu" class="partner-logo" target="_blank">
-                <img src="assets/img/logo_european_mobilityweek_wit.png" alt="Logo European Mobility Week" width="153" height="11">
+                <picture>
+                  <source media="(min-width: 10px)" srcset="assets/img/logo_european_mobilityweek_wit.webp" type="image/webp"/>
+                  <img src="assets/img/logo_european_mobilityweek_wit.png" alt="Logo European Mobility Week" width="153" height="11">
+                </picture>
               </a>
             </div>
           </section>

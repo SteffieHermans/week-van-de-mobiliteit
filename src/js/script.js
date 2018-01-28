@@ -59,7 +59,11 @@
 
     $link.innerHTML = `<article class="program-grid-item">
                         <picture>
-                          <img class="grid-image" src="assets/img/ANT1-grid-290w.jpg" alt="${event.title}">
+                          <source media="(min-width: 10px)" srcset="assets/img/${event.code}-grid-580w.webp" type="image/webp"/>
+                          <img class="grid-image" src="assets/img/${event.code}-grid-290w.jpg" alt="<?php echo $similar['title']; ?>" width="290" height="224"
+                          srcset="assets/img/${event.code}-grid-580w.jpg 580w,
+                                  assets/img/${event.code}-grid-290w.jpg 290w"
+                          sizes="(min-width: 10px) 29rem">
                         </picture>
                         <ul class="tags">
                           <li class="tag">${event.tags[1].tag}</li>

@@ -1,29 +1,23 @@
 const path = require(`path`);
 const webpack = require(`webpack`);
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const merge = require(`webpack-merge`);
+const parts = require(`./webpack.parts.js`);
 
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
+
+const CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin;
 
 const PATHS = {
   src: path.join(__dirname, `src`),
   dist: path.join(__dirname, `dist`),
 };
-const merge = require(`webpack-merge`);
-const parts = require(`./webpack.parts.js`);
 
 const commonConfig = merge([ {
   entry: [
     path.join(PATHS.src, `css/style.css`),
     path.join(PATHS.src, `js/script.js`),
   ],
-  devtool: `sourcemap`,
-  devServer: {
-    contentBase: `./src`,
-    historyApiFallback: true,
-    hot: true,
-    port: 8080,
-  },
   output: {
     path: PATHS.dist,
     filename: `js/script.js`,
@@ -86,13 +80,9 @@ const commonConfig = merge([ {
     ]
   },
   plugins:[
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       'Promise': 'es6-promise',
       'fetch': 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
-    }),
-    new HtmlWebpackPlugin({
-        template: "./src/index.php"
     })
   ]
 }]);

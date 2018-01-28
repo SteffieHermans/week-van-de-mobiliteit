@@ -35,7 +35,11 @@
         <a class="grid-item-link" href="index.php?page=event-detail&amp;id=<?php echo $similar['id'];?>">
           <article class="program-grid-item">
             <picture>
-              <img class="grid-image" src="assets/img/ANT1-grid-290w.jpg" alt="<?php echo $similar['title']; ?>">
+              <source media="(min-width: 10px)" srcset="assets/img/<?php echo $similar['code']; ?>-grid-580w.webp" type="image/webp"/>
+              <img class="grid-image" src="assets/img/<?php echo $similar['code']; ?>-grid-290w.jpg" alt="<?php echo $similar['title']; ?>" width="290" height="224"
+              srcset="assets/img/<?php echo $similar['code']; ?>-grid-580w.jpg 580w,
+                      assets/img/<?php echo $similar['code']; ?>-grid-290w.jpg 290w"
+              sizes="(min-width: 10px) 29rem">
             </picture>
             <ul class="tags">
               <li class="tag"><?php echo $similar['tags'][1]['tag'];?></li>

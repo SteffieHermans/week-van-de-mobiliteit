@@ -8,9 +8,8 @@
   "license": "MIT",
   "scripts": {
     "development": "NODE_ENV=development webpack-dev-server --open 'Google Chrome'",
-    "production": "yarn run clean && yarn run copydist && NODE_ENV=production webpack -p ",
+    "production": "yarn run clean && yarn run copydist && NODE_ENV=production webpack -p",
     "copydist": "ditto ./src/ ./dist/ && rm -rf ./dist/css && rm -rf ./dist/js",
-    "test": "jest",
     "clean": "rm -rf ./dist"
   },
   "devDependencies": {
@@ -49,6 +48,6 @@
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1",
     "whatwg-fetch": "^2.0.3",
-    "luxbar": "^0.3.2"
+    "webpack-plugin-critical": "^1.0.0"
   }
 }
