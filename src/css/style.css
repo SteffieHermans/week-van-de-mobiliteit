@@ -266,7 +266,8 @@ strong {
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: flex-start;
+  justify-self: flex-start;
 }
 
 .header-image {
@@ -374,10 +375,13 @@ strong {
   margin-top: .75rem;
 }
 
+.video {
+  margin-top: 5rem;
+}
+
 .embed-container {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+  height: 48vw;
   overflow: hidden;
   max-width: 96%;
 }
@@ -403,7 +407,8 @@ strong {
 }
 
 .beleef {
-  margin-top: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -423,6 +428,7 @@ strong {
     'donderdag'
     'vrijdag';
   grid-gap: 3rem;
+  align-items: flex-start;
 }
 
 .event-day {
@@ -434,7 +440,6 @@ strong {
   align-items: flex-start;
   width: calc(100% - .5rem);
   max-width: 27.1rem;
-  height: fit-content;
 
   &::after {
     content: '';
@@ -480,7 +485,7 @@ strong {
 }
 
 .doe-mee {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .switch {
@@ -562,6 +567,11 @@ strong {
 .instagram-image-1, .instagram-image-2, .instagram-image-3, .instagram-image-4, .instagram-image-5, .instagram-image-6, .instagram-image-7, .instagram-image-8, .instagram-image-9 {
   width: 29vw;
   height: 29vw;
+
+  &:hover {
+    cursor: pointer;
+    filter: grayscale(30%);
+  }
 }
 /* end Home Page */
 
@@ -962,7 +972,7 @@ h3 {
   align-self: center;
 }
 
-.nuttige-info, .main-info, .practical-info {
+.nuttige-info, .main-info, .practical-info, .hashtag {
 
   & a {
     text-decoration: none;
@@ -1166,12 +1176,6 @@ address {
   .video {
     display: flex;
     align-items: center;
-    margin-top: -2rem;
-  }
-
-  .beleef {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
   }
 
   .grey-square {
@@ -1185,6 +1189,8 @@ address {
 
   .embed-container {
     width: 54vw;
+    height: 31vw;
+    max-height: 29.8rem;
   }
 
   .event-days {
@@ -1516,6 +1522,11 @@ address {
 
   .detail-title-container div {
     padding: 2rem;
+  }
+
+  .grey-square {
+    margin-left: -22.1rem;
+    padding-left: 24.1rem;
   }
 }
 
