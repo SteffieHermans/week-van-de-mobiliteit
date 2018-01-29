@@ -62,7 +62,7 @@
         <li>Voel je goed in je vel</li>
       </ul>
       <div class="buttons">
-        <a class="btn first-button" href="#">Vind een Activiteit</a>
+        <a class="btn first-button" href="index.php?page=programma">Vind een Activiteit</a>
         <a class="btn secondary" href="#">Registreer een Actie</a>
       </div>
     </div>
@@ -70,7 +70,7 @@
   <article class="instagram">
     <h3 class="switch-subtitle">#WeekvdMobiliteit</h3>
     <div class="instagram-grid">
-      <a class="instagram-image-1" href="https://www.instagram.com/p/BZQQCJiDC1n/?tagged=weekvdmobiliteit"><picture class="instagram-image-1">
+      <a class="instagram-image-1" href="https://www.instagram.com/p/BZQQCJiDC1n/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-1">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM1-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM1-263w.webp" type="image/webp"/>
           <source media="(min-width: 740px)" srcset="assets/img/WvdM1-525w.webp" type="image/webp"/>
@@ -90,7 +90,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-2" href="https://www.instagram.com/p/BZQMHEeBdBL/?tagged=weekvdmobiliteit"><picture class="instagram-image-2">
+      <a class="instagram-image-2" href="https://www.instagram.com/p/BZQMHEeBdBL/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-2">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM2-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM2-263w.webp" type="image/webp"/>
           <img class="instagram-image-2"
@@ -109,7 +109,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-3" href="https://www.instagram.com/p/BZMQekcn88Z/?tagged=weekvdmobiliteit"><picture class="instagram-image-3">
+      <a class="instagram-image-3" href="https://www.instagram.com/p/BZMQekcn88Z/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-3">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM3-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM3-263w.webp" type="image/webp"/>
           <img class="instagram-image-3"
@@ -128,7 +128,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-4" href="https://www.instagram.com/p/BZEl8XQBzk3/?tagged=weekvdmobiliteit"><picture class="instagram-image-4">
+      <a class="instagram-image-4" href="https://www.instagram.com/p/BZEl8XQBzk3/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-4">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM4-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM4-263w.webp" type="image/webp"/>
           <img class="instagram-image-4"
@@ -147,7 +147,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-5" href="https://www.instagram.com/p/BZSvlf7jFSw/?tagged=weekvdmobiliteit"><picture class="instagram-image-5">
+      <a class="instagram-image-5" href="https://www.instagram.com/p/BZSvlf7jFSw/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-5">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM5-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM5-263w.webp" type="image/webp"/>
           <img class="instagram-image-5"
@@ -166,7 +166,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-6" href="https://www.instagram.com/p/BZQSTq9gXH4/?tagged=weekvdmobiliteit"><picture class="instagram-image-6">
+      <a class="instagram-image-6" href="https://www.instagram.com/p/BZQSTq9gXH4/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-6">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM6-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM6-263w.webp" type="image/webp"/>
           <source media="(min-width: 740px)" srcset="assets/img/WvdM6-525w.webp" type="image/webp"/>
@@ -186,7 +186,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-7" href="https://www.instagram.com/p/BZQjV1UDi6R/?tagged=weekvdmobiliteit"><picture class="instagram-image-7">
+      <a class="instagram-image-7" href="https://www.instagram.com/p/BZQjV1UDi6R/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-7">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM7-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM7-263w.webp" type="image/webp"/>
           <img class="instagram-image-7"
@@ -205,7 +205,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-8" href="https://www.instagram.com/p/BZQMvKhnAbi/?tagged=weekvdmobiliteit"><picture class="instagram-image-8">
+      <a class="instagram-image-8" href="https://www.instagram.com/p/BZQMvKhnAbi/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-8">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM8-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM8-263w.webp" type="image/webp"/>
           <img class="instagram-image-8"
@@ -224,7 +224,7 @@
 
             alt="Week van de Mobileit Instagram Response"/>
         </picture></a>
-      <a class="instagram-image-9" href="https://www.instagram.com/p/BZI0rNRBLDn/?tagged=weekvdmobiliteit"><picture class="instagram-image-9">
+      <a class="instagram-image-9" href="https://www.instagram.com/p/BZI0rNRBLDn/?tagged=weekvdmobiliteit" target="_blank"><picture class="instagram-image-9">
           <source media="(max-width: 450px)" srcset="assets/img/WvdM9-126w.webp" type="image/webp"/>
           <source media="(min-width: 451px)" srcset="assets/img/WvdM9-263w.webp" type="image/webp"/>
           <img class="instagram-image-9"
